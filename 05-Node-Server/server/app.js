@@ -12,6 +12,7 @@ let user = require("./controllers/usercontroller");
 
 sequelize.afterSync();
 //sequelize.sync({force: true});
+app.use(require('./middleware/headers'));
 
 app.use(express.json());
 
